@@ -2,10 +2,22 @@
 module.exports = {
   content: [
     "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
+    "./src/**/*.{vue,js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors : {
+        background : {
+            100 : '#0D1117',
+            500 : '#121212',
+            900 : '#010409'
+        },
+        tiktok : {
+            100 : '#4BE1EC',
+            900 : '#E72217'
+        }
+      }
+    }
   },
   plugins: [],
 }

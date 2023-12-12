@@ -1,0 +1,51 @@
+{
+    "projects" : [
+        {
+            "id" : 1,
+            "title" : "E-commerce de mangás",
+            "sub_title" : "projeto Havartz",
+            "link_site" : "https://projeto-havertz.vercel.app/",
+            "link-github" : "https://github.com/llipe20/projeto-havertz", 
+            "backdrop" : "",
+            "overview" : "Pequena aplicação de uma lojinha de venda online de mangás japoneses. O objetivo principal é práticar os conhecimentos aquiridos em Tailwindcss, utilizando sua enorme biblioteca para criar uma interface simples e de fácil navegação. Usei json-serve para facilitar a manipulação dos dados dos produtos e Vue.js, juntamente com suas bibliotecas - vuex e vue routers - para orquestrar o sistema.",
+            "tech_skills" : [
+                {
+                    "id" : 1,
+                    "name" : "Vue.js",
+                    "icon" : ""
+                },
+                {
+                    "id" : 2,
+                    "name" : "TailwindCSS",
+                    "icon" : ""
+                }
+            ]
+        },
+        {
+            "id" : 2,
+            "title" : "Plataforma de filmes + Sistema de login",
+            "sub_title" : "projeto Akuma no mi",
+            "link_site" : "https://projeto-akuma-no-mi.vercel.app/",
+            "link-github" : "https://github.com/llipe20/projeto-akuma-no-mi", 
+            "backdrop" : "",
+            "overview" : "Projeto criado para um trabalho da faculdade que me rendeu nota máxima, aplicando conhecimentos adquiridos em Vue.js, Tailwind e API´s, consumindo a enorme biblioteca de filmes disponibilizada pela The Movie Database. O sistema de login da aplicação foi implementado usando json-serve como banco de dados improvisado.",
+            "tech_skills" : [
+                {
+                    "id" : 1,
+                    "name" : "Vue.js",
+                    "icon" : ""
+                },
+                {
+                    "id" : 2,
+                    "name" : "TailwindCSS",
+                    "icon" : ""
+                },
+                {
+                    "id" : 3,
+                    "name" : "API TMDB",
+                    "icon" : ""
+                }
+            ]
+        }
+    ]
+}
