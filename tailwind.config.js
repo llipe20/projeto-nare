@@ -16,6 +16,9 @@ module.exports = {
             100 : '#4BE1EC',
             900 : '#E72217'
         }
+      },
+      spacing : {
+        '-5' : '-25px'
       }
     }
   },
