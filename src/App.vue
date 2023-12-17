@@ -58,7 +58,7 @@
                     v-if="width < 580"
                     class="w-full h-20"></div>
                 <!-- bloco para apresentação -->
-                <div class="flex flex-col justify-center items-start gap-3 text-xl md:text-3xl bg-red-500">
+                <div class="flex flex-col justify-center items-center gap-3 text-xl md:text-3xl">
                       <p class="">
                          OIE, EU SOU O
                       </p>
@@ -69,8 +69,15 @@
                           DESENVLVEDOR FRONT-END
                       </h2>
                       <!-- tech skills -->
-                      <ul>
-
+                      <ul class="flex flex-wrap gap-3 mt-2 mb-2 w-2/3 md:w-auto">
+                            <img align="center" alt="llpe-CSS" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/vuejs/vuejs-original.svg">
+                            <img align="center" alt="llpe-CSS" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/tailwindcss/tailwindcss-plain.svg">
+                            <img align="center" alt="llpe-CSS" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/sass/sass-original.svg">
+                            <img align="center" alt="llpe-Js" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg">
+                            <img align="center" alt="llpe-HTML" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg">
+                            <img align="center" alt="llpe-CSS" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg">
+                            <img align="center" alt="llpe-Php" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/php/php-original.svg">
+                            <img align="center" alt="llpe-MySQL" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original.svg">
                       </ul>
                       <!-- buttons -->
                       <div class="flex justify-center items-center gap-5">
@@ -78,13 +85,13 @@
                                 @click="Ancora(btn.linkedin)"
                                 :tag="btn.linkedin"
                                 :style="{ borderColor: animatedColor }"
-                                class="w-40 md:w-48 h-12 text-lg rounded-lg  border border-2 animated-border scale-95 hover:scale-100"
+                                class="w-36 md:w-48 h-12 text-lg rounded-lg  border border-2 animated-border scale-95 hover:scale-100"
                             />
 
                             <ButtonVue
                                  @click="Ancora(btn.github)"
                                 :tag="btn.github"
-                                class="w-40 md:w-48 h-12 text-lg rounded-lg border border-2 scale-95 hover:scale-100"
+                                class="w-36 md:w-48 h-12 text-lg rounded-lg border border-2 scale-95 hover:scale-100"
                             />
                       </div>
                 </div>
@@ -124,8 +131,8 @@ export default {
             isMobile : false,
             width: window.innerWidth,
             btn : {
-              linkedin : '<span>Linkedin</span>',
-              github : '<span>Github</span>'
+              linkedin : '<i class="fi fi-brands-linkedin"></i><span>Linkedin</span>',
+              github : '<i class="fi fi-brands-github"></i><span>Github</span>'
             }
         }
     },
@@ -160,6 +167,7 @@ export default {
 
 <style scoped>
   @import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
+  @import url('https://cdn-uicons.flaticon.com/2.0.0/uicons-brands/css/uicons-brands.css');
 
   .font-logo {
       font-family: 'Acme', sans-serif;
