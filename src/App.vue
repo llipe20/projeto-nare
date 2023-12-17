@@ -2,10 +2,10 @@
     <div class="flex justify-center items-center w-screen min-h-screen bg-background-100 text-white">
         <!-- Header -->
         <section id="home" class="flex justify-center items-center w-full h-screen relative">
-            <header class="flex flex-col md:flex-row justify-center md:justify-around items-center w-full h-full">
-                <nav class="flex justify-center items-center gap-5 w-full h-20 bg-background-900 fixed inset-0">
+            <header class="flex flex-col md:flex-row justify-around items-center w-full h-full">
+                <nav class="flex justify-around xl:justify-around items-center gap-5 w-full h-20 bg-background-900 fixed inset-0">
                     <!-- logo -->
-                    <div class="flex justify-start items-center h-full w-2/4 text-tiktok-100 font-logo xl:text-2xl text-xl">
+                    <div class="flex justify-start items-center h-full w-1/4 text-tiktok-100 font-logo xl:text-2xl text-xl">
                           <span>
                              {{ logo }}
                           </span>
@@ -15,23 +15,23 @@
                             class="flex flex-col xl:flex-row justify-center xl:justify-between items-center gap-3 xl:gap-0 h-auto xl:h-full w-44 xl:w-full p-4 xl:p-0 text-lg text-start absolute xl:static top-full right-[-30px] bg-background-900 transition-all duration-100"
                             v-if="isMobile || width > 1280" 
                         >
-                            <li class="w-5/6 xl:w-auto hover:border-b xl:hover:border-0">
-                                <a href="#home" class="xl:hover:border-b">
+                            <li class="w-5/6 xl:w-auto relative">
+                                <a href="#home">
                                     Início
                                 </a>
                             </li>
-                            <li class="w-5/6 xl:w-auto hover:border-b xl:hover:border-0">
-                                <a href="#sobre" class="xl:hover:border-b">
+                            <li class="w-5/6 xl:w-auto relative">
+                                <a href="#sobre">
                                     Sobre mim
                                 </a>
                             </li>
-                            <li class="w-5/6 xl:w-auto hover:border-b xl:hover:border-0">
-                                <a href="#projeto" class="xl:hover:border-b">
+                            <li class="w-5/6 xl:w-auto relative">
+                                <a href="#projeto">
                                   Projetos
                                 </a>
                             </li>
-                            <li class="w-5/6 xl:w-auto hover:border-b xl:hover:border-0">
-                                <a href="#contato" class="xl:hover:border-b">
+                            <li class="w-5/6 xl:w-auto relative">
+                                <a href="#contato">
                                   Contato
                                 </a>
                             </li>
@@ -51,16 +51,18 @@
                             >
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
                             </svg>
-                        </button>
-                        
+                        </button>   
                     </div>
                 </nav>
+                <div 
+                    v-if="width < 580"
+                    class="w-full h-20"></div>
                 <!-- bloco para apresentação -->
-                <div class="flex flex-col justify-center items-start gap-2 text-3xl bg-red-500">
+                <div class="flex flex-col justify-center items-start gap-3 text-xl md:text-3xl bg-red-500">
                       <p class="">
-                         IAE, EU SOU O
+                         OIE, EU SOU O
                       </p>
-                      <h1 class="text-5xl">
+                      <h1 class="text-4xl md:text-5xl p-2 pl-0">
                           FELIPE C SILVA
                       </h1>
                       <h2>
@@ -71,12 +73,23 @@
 
                       </ul>
                       <!-- buttons -->
-                      <div>
+                      <div class="flex justify-center items-center gap-5">
+                            <ButtonVue
+                                @click="Ancora(btn.linkedin)"
+                                :tag="btn.linkedin"
+                                :style="{ borderColor: animatedColor }"
+                                class="w-40 md:w-48 h-12 text-lg rounded-lg  border border-2 animated-border scale-95 hover:scale-100"
+                            />
 
+                            <ButtonVue
+                                 @click="Ancora(btn.github)"
+                                :tag="btn.github"
+                                class="w-40 md:w-48 h-12 text-lg rounded-lg border border-2 scale-95 hover:scale-100"
+                            />
                       </div>
                 </div>
                 <!-- bloco para imagem -->
-                <div class="w-80 h-80">
+                <div class="w-80 lg:w-1/4 h-80 bg-red-500">
                      
                 </div>
             </header>
@@ -97,14 +110,23 @@
 </template>
 
 <script>
+import ButtonVue from './components/Button.vue'
 export default {
     name : 'App',
+
+    components : {
+        ButtonVue
+    },
 
     data() {
         return {
             logo : '<llPE/>',
             isMobile : false,
-            width: window.innerWidth
+            width: window.innerWidth,
+            btn : {
+              linkedin : '<span>Linkedin</span>',
+              github : '<span>Github</span>'
+            }
         }
     },
 
@@ -118,13 +140,21 @@ export default {
         }
     },
 
-     mounted() {
-        window.addEventListener('resize', this.UpdateWidth);
-      },
+    Ancora(acesso) {
+        if(acesso == this.btn.linkedin) {
+            
+        } else {
 
-      beforeDestroy() {
-        window.removeEventListener('resize', this.UpdateWidth);
-      }
+        }
+    },
+
+    mounted() {
+        window.addEventListener('resize', this.UpdateWidth)
+    },
+
+    beforeDestroy() {
+        window.removeEventListener('resize', this.UpdateWidth)
+    }
   }
 </script>
 
@@ -144,5 +174,21 @@ export default {
       width: 10px;
       background-color: #1b1b1b;
   }
+
+  li > a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    background-color: #0077cc; /* Cor da borda */
+    transition: all 0.3s ease-in-out; /* Adiciona uma transição suave */
+  }
+
+  li > a:hover::after {
+    width: 100%; /* Amplia a largura ao passar o mouse */
+    left: 0; /* Move a partir da borda esquerda */
+}
 
 </style>
