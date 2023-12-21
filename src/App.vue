@@ -1,5 +1,5 @@
 <template>
-    <div class="flex flex-col justify-center items-center w-screen min-h-screen bg-background-100 text-white font-logo">
+    <div class="flex flex-col justify-center items-center w-screen min-h-screen bg-background-100 text-white font-logo overflow-x-hidden">
         <!-- Header -->
         <section id="home" class="flex justify-center items-center w-full h-screen relative">
             <header class="flex flex-col md:flex-row justify-around items-center w-full h-full">
