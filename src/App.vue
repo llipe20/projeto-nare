@@ -64,7 +64,7 @@
                         <p>
                             OIE, EU SOU O
                         </p>
-                        <h1 class="text-4xl md:text-5xl p-2 pl-0">
+                        <h1 class="text-4xl md:text-5xl p-2 pl-0 text-tiktok-100">
                             FELIPE C SILVA
                         </h1>
                         <h2>
