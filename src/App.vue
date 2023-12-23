@@ -1,8 +1,8 @@
 <template>
-    <div class="flex flex-col justify-center items-center w-screen min-h-screen bg-background-100 text-white font-logo overflow-x-hidden">
+    <div class="flex flex-col justify-center items-center w-screen min-h-screen bg-background-100 text-white font-logo overflow-x-hidden text-tiktok-500 relative">
         <!-- Header -->
-        <section id="home" class="flex justify-center items-center w-full h-screen relative">
-            <header class="flex flex-col md:flex-row justify-around items-center w-full h-full">
+        <section id="home" class="flex justify-center items-center w-full h-screen ">
+            <header class="flex flex-col md:flex-row justify-center lg:justify-around items-center gap-10 lg:gap-0 w-full h-full">
                 <nav class="flex justify-around xl:justify-around items-center gap-5 w-full h-20 bg-background-900 fixed inset-0 z-10">
                     <!-- logo -->
                     <div class="flex justify-start items-center h-full w-1/4 text-tiktok-100 xl:text-2xl text-xl">
@@ -21,17 +21,17 @@
                                 </a>
                             </li>
                             <li class="w-5/6 xl:w-auto relative">
-                                <a href="#sobre">
+                                <a href="#about">
                                     Sobre mim
                                 </a>
                             </li>
                             <li class="w-5/6 xl:w-auto relative">
-                                <a href="#projeto">
+                                <a href="#projects">
                                   Projetos
                                 </a>
                             </li>
                             <li class="w-5/6 xl:w-auto relative">
-                                <a href="#contato">
+                                <a href="#footer">
                                   Contato
                                 </a>
                             </li>
@@ -106,24 +106,63 @@
             </header>
         </section>
         <!-- Sobre min -->
-        <section id="about" class="flex flex-col lg:flex-row justify-center items-center gap-6 w-full h-screen">
+        <section id="about" class="flex flex-col lg:flex-row justify-center items-center gap-6 w-full h-screen bg-background-500">
             <!-- bloco para imagem -->
             <div class="w-80 lg:w-1/4 h-80 bg-red-500">
                     
             </div>
-            <div class="flex justify-center items-center w-72 lg:w-1/4">
+            <div class="flex flex-col justify-center items-center lg:items-start gap-3 w-72 lg:w-2/4">
+                <h3 class="text-xl lg:text-2xl">SOBRE MIM</h3>
+                <h4 class="text-lg lg:text-xl">Caxias - MA</h4>
                 <p class="text-start leading-6 text-base lg:text-lg">
                     Meu nome é Felipe, tenho 20 anos e estou na metade do curso de Análise e Desenvolvimento de Sistema. Atualmente, estou aprimorando minhas habilidades para atuar como Desenvolvedor Front-End, com as tecnologias Vue.js e TailwindCSS. Apesar do meu foco ser a construção de interfaces, possuo conhecimento em API's e em linguagem do lado do servidor com PHP, podendo construir pequenos sistemas.
                 </p>
+                <!-- buttons -->
+                <div class="flex justify-center items-center gap-5 mt-5">
+                    <ButtonVue
+                        @click="Ancora(btn.linkedin)"
+                        :tag="btn.curriculo"
+                        :style="{ borderColor: animatedColor }"
+                        class="w-32 md:w-48 h-12 text-lg rounded-lg  border border-2 animated-border scale-95 hover:scale-100"
+                    />
+
+                    <ButtonVue
+                        @click="Ancora(btn.github)"
+                        :tag="btn.whats"
+                        class="w-32 md:w-48 h-12 text-lg rounded-lg border border-2 scale-95 hover:scale-100"
+                    />
+                </div>
             </div>
+            
         </section>
         <!-- Projetos -->
-        <section id="projetc">
-
+        <section id="projects" class="flex lg:flex-wrap flex-col lg:flex-row justify-center items-center gap-8 w-full min-h-screen p-10 mt-10 mb-10">
+            <div>
+                <h3 class="text-xl lg:text-2xl">PROJETOS</h3>
+            </div>
+            <div class="flex lg:flex-wrap flex-col lg:flex-row justify-center items-center gap-6 w-full">
+                <div
+                    class="flex justify-center items-center h-72 w-80 md:h-80 md:w-96 bg-red-500 rounded">
+                </div>
+                <div
+                    class="flex justify-center items-center h-72 w-80 md:h-80 md:w-96 bg-red-500 rounded">
+                </div>
+                <div
+                    class="flex justify-center items-center h-72 w-80 md:h-80 md:w-96 bg-red-500 rounded">
+                </div>
+                <div
+                    class="flex justify-center items-center h-72 w-80 md:h-80 md:w-96 bg-red-500 rounded">
+                </div>
+                <div
+                    class="flex justify-center items-center h-72 w-80 md:h-80 md:w-96 bg-red-500 rounded">
+                </div><div
+                    class="flex justify-center items-center h-72 w-80 md:h-80 md:w-96 bg-red-500 rounded">
+                </div>
+            </div>
         </section>
         <!-- Footer -->
-        <section id="footer">
-          
+        <section id="footer" class="flex flex-col lg:flex-row justify-center items-center gap-6 w-full h-40 bg-background-900 mt-5">
+            
         </section>
     </div>
 </template>
@@ -144,7 +183,9 @@ export default {
             width: window.innerWidth,
             btn : {
               linkedin : '<i class="fi fi-brands-linkedin"></i><span>Linkedin</span>',
-              github : '<i class="fi fi-brands-github"></i><span>Github</span>'
+              github : '<i class="fi fi-brands-github"></i><span>Github</span>',
+              whats : '<i class="fi fi-brands-whatsapp"></i><span>WhatsApp</span>',
+              curriculo : '<i class="fi fi-rr-cloud-download-alt"></i><span>Currículo</span>'
             },
             skills : [
                 {
@@ -214,13 +255,14 @@ export default {
 <style scoped>
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap');
     @import url('https://cdn-uicons.flaticon.com/2.0.0/uicons-brands/css/uicons-brands.css');
+    @import url('https://cdn-uicons.flaticon.com/2.0.0/uicons-regular-rounded/css/uicons-regular-rounded.css')
+
+     *::-webkit-scrollbar {
+        display: none;
+    }
 
     .font-logo {
         font-family: 'Inter', sans-serif;
-    }
-
-    *::-webkit-scrollbar {
-        display: none;
     }
 
     li > a::after {
