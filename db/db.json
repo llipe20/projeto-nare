@@ -12,12 +12,17 @@
                 {
                     "id" : 1,
                     "name" : "Vue.js",
-                    "icon" : ""
+                    "logo" : "https://raw.githubusercontent.com/devicons/devicon/master/icons/vuejs/vuejs-original.svg"
                 },
                 {
                     "id" : 2,
-                    "name" : "TailwindCSS",
-                    "icon" : ""
+                    "name" : "Tailwind CSS",
+                    "logo" : "https://raw.githubusercontent.com/devicons/devicon/master/icons/tailwindcss/tailwindcss-plain.svg"
+                },
+                {
+                    "id" : 3,
+                    "name" : "Java Script",
+                    "logo" : "https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg"
                 }
             ]
         },
@@ -33,17 +38,22 @@
                 {
                     "id" : 1,
                     "name" : "Vue.js",
-                    "icon" : ""
+                    "logo" : "https://raw.githubusercontent.com/devicons/devicon/master/icons/vuejs/vuejs-original.svg"
                 },
                 {
                     "id" : 2,
-                    "name" : "TailwindCSS",
-                    "icon" : ""
+                    "name" : "Tailwind CSS",
+                    "logo" : "https://raw.githubusercontent.com/devicons/devicon/master/icons/tailwindcss/tailwindcss-plain.svg"
                 },
                 {
                     "id" : 3,
+                    "name" : "Java Script",
+                    "logo" : "https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg"
+                },
+                {
+                    "id" : 4,
                     "name" : "API TMDB",
-                    "icon" : ""
+                    "icon" : "https://i.ibb.co/NTxkdxQ/api.png"
                 }
             ]
         }
