@@ -88,7 +88,7 @@
                         <ButtonVue
                             @click="Ancora('https://www.linkedin.com/in/felipe-silva--/')"
                             :tag="btn.linkedin"
-                            :style="{ borderColor: animatedColor }"
+                            :class="borderClass"
                             class="w-32 md:w-48 h-12 text-lg rounded-lg  border border-2 animated-border scale-95 hover:scale-100"
                         />
 
@@ -235,7 +235,7 @@ export default {
 
         Ancora(acesso) {
             window.open(`${acesso}`, '_blank')
-        },
+        }
     },
 
     async created() {
@@ -277,12 +277,13 @@ export default {
         height: 2px;
         bottom: 0;
         left: 50%;
-        background-color: #0077cc; /* Cor da borda */
-        transition: all 0.3s ease-in-out; /* Adiciona uma transição suave */
+        background-color: #0077cc; 
+        transition: all 0.3s ease-in-out; 
     }
 
     li > a:hover::after {
-        width: 100%; /* Amplia a largura ao passar o mouse */
-        left: 0; /* Move a partir da borda esquerda */
+        width: 100%; 
+        left: 0;
     }
+
 </style>
