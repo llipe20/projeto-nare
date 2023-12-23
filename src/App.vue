@@ -1,12 +1,12 @@
 <template>
-    <div class="flex flex-col justify-center items-center w-screen min-h-screen bg-background-100 text-white font-logo overflow-x-hidden text-tiktok-500 relative">
+    <div class="flex flex-col justify-center items-center w-screen min-h-screen bg-background-100 text-white font-text overflow-x-hidden text-tiktok-500 relative">
         <!-- Header -->
         <section id="home" class="flex justify-center items-center w-full h-screen ">
             <header class="flex flex-col md:flex-row justify-center lg:justify-around items-center gap-10 lg:gap-0 w-full h-full">
                 <nav class="flex justify-around xl:justify-around items-center gap-5 w-full h-20 bg-background-900 fixed inset-0 z-10">
                     <!-- logo -->
                     <div class="flex justify-start items-center h-full w-1/4 text-tiktok-100 xl:text-2xl text-xl">
-                          <span>
+                          <span class="font-logo">
                              {{ logo }}
                           </span>
                     </div>
@@ -86,14 +86,14 @@
                     <!-- buttons -->
                     <div class="flex justify-center items-center gap-5 text-tiktok-500">
                         <ButtonVue
-                            @click="Ancora(btn.linkedin)"
+                            @click="Ancora('https://www.linkedin.com/in/felipe-silva--/')"
                             :tag="btn.linkedin"
                             :style="{ borderColor: animatedColor }"
                             class="w-32 md:w-48 h-12 text-lg rounded-lg  border border-2 animated-border scale-95 hover:scale-100"
                         />
 
                         <ButtonVue
-                            @click="Ancora(btn.github)"
+                            @click="Ancora('https://github.com/llipe20')"
                             :tag="btn.github"
                             class="w-32 md:w-48 h-12 text-lg rounded-lg border border-2 scale-95 hover:scale-100"
                         />
@@ -112,8 +112,12 @@
                     Imagem aqui
             </div>
             <div class="flex flex-col justify-center items-center lg:items-start gap-3 w-72 lg:w-2/4 text-tiktok-500 lg:pl-5">
-                <h3 class="text-xl lg:text-2xl">SOBRE MIM</h3>
-                <h4 class="text-lg lg:text-xl">Caxias - MA</h4>
+                <h3 class="text-xl lg:text-2xl">
+                    SOBRE MIM
+                </h3>
+                <h4 class="text-lg lg:text-xl">
+                    Caxias - MA
+                </h4>
                 <p class="text-center lg:text-start leading-6 text-base lg:text-lg">
                     Meu nome é Felipe, tenho 20 anos e estou na metade do curso de Análise e Desenvolvimento de Sistema. Atualmente, estou aprimorando minhas habilidades para atuar como Desenvolvedor Front-End, com as tecnologias Vue.js e TailwindCSS. Apesar do meu foco ser a construção de interfaces, possuo conhecimento em API's e em linguagem do lado do servidor com PHP, podendo construir pequenos sistemas.
                 </p>
@@ -127,7 +131,7 @@
                     />
 
                     <ButtonVue
-                        @click="Ancora(btn.github)"
+                        @click="Ancora('https://wa.me/qr/O43EG6NVZ3QCE1')"
                         :tag="btn.whats"
                         class="w-36 md:w-48 h-12 text-base lg:text-lg rounded-lg border border-2 scale-95 hover:scale-100"
                     />
@@ -227,15 +231,11 @@ export default {
 
         UpdateWidth() {
             this.width = window.innerWidth
-        }
-    },
+        },
 
-    Ancora(acesso) {
-        if(acesso == this.btn.linkedin) {
-            
-        } else {
-
-        }
+        Ancora(acesso) {
+            window.open(`${acesso}`, '_blank')
+        },
     },
 
     async created() {
@@ -253,16 +253,21 @@ export default {
 </script>
 
 <style scoped>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap');
     @import url('https://cdn-uicons.flaticon.com/2.0.0/uicons-brands/css/uicons-brands.css');
     @import url('https://cdn-uicons.flaticon.com/2.0.0/uicons-regular-rounded/css/uicons-regular-rounded.css');
+    @import url('https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500&display=swap');
+
 
     *::-webkit-scrollbar {
         display: none;
     }
 
-    .font-logo {
+    .font-text {
         font-family: 'Inter', sans-serif;
+    }
+
+    .font-logo {
+        font-family: 'Anton', sans-serif;
     }
 
     li > a::after {

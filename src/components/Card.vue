@@ -30,12 +30,14 @@
             <!-- buttons -->
             <div class="flex justify-center items-center gap-3 text-base lg:text-lg mb-2">
                 <ButtonVue
+                    @click="Ancora(project.link_site)"
                     :tag="link"
                     :style="{ borderColor: animatedColor }"
                     class="w-36 md:w-44 h-12 rounded-lg border border-2 animated-border scale-95 hover:scale-100"
                 />
 
                 <ButtonVue
+                    @click="Ancora(project.link_github)"
                     :tag="github"
                     class="w-36 md:w-44 h-12 rounded-lg border border-2 scale-95 hover:scale-100"
                 />
@@ -61,6 +63,12 @@ export default {
         return {
             link : '<i class="fi fi-br-link-alt"></i><span>Acesso</span>',
             github : '<i class="fi fi-brands-github"></i><span>Repositório</span>'
+        }
+    },
+
+    methods : {
+        Ancora(acesso) {
+            window.open(`${acesso}`, '_blank')
         }
     }
 }
