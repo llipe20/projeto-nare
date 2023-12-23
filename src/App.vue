@@ -60,7 +60,7 @@
                 </div>
                 <!-- bloco para apresentação -->
                 <div class="flex flex-col justify-center items-center lg:items-start gap-6 text-xl md:text-3xl">
-                    <div class="flex flex-col justify-center gap-2">
+                    <div class="flex flex-col justify-center gap-2 text-tiktok-500">
                         <p>
                             OIE, EU SOU O
                         </p>
@@ -73,7 +73,7 @@
                     </div>
                     <!-- tech skills -->
                     <ul 
-                        class="flex flex-row gap-3 w-2/3 md:w-auto justify-center items-center"  
+                        class="flex flex-row gap-3 w-2/3 md:w-auto justify-center items-center text-tiktok-500"  
                     >
                         <img 
                             v-for="skill in skills" 
@@ -84,7 +84,7 @@
                         >
                     </ul>
                     <!-- buttons -->
-                    <div class="flex justify-center items-center gap-5">
+                    <div class="flex justify-center items-center gap-5 text-tiktok-500">
                         <ButtonVue
                             @click="Ancora(btn.linkedin)"
                             :tag="btn.linkedin"
@@ -100,64 +100,53 @@
                     </div>
                 </div>
                 <!-- bloco para imagem -->
-                <div class="w-80 lg:w-1/4 h-80 bg-red-500">
-                     
+                <div class="flex justify-center items-center w-80 lg:w-1/4 h-80 border-2 rounded-lg">
+                     Imagem aqui
                 </div>
             </header>
         </section>
         <!-- Sobre min -->
         <section id="about" class="flex flex-col lg:flex-row justify-center items-center gap-6 w-full h-screen bg-background-500">
             <!-- bloco para imagem -->
-            <div class="w-80 lg:w-1/4 h-80 bg-red-500">
-                    
+            <div class="flex justify-center items-center w-80 lg:w-1/4 h-80 border-2 rounded-lg">
+                    Imagem aqui
             </div>
-            <div class="flex flex-col justify-center items-center lg:items-start gap-3 w-72 lg:w-2/4">
+            <div class="flex flex-col justify-center items-center lg:items-start gap-3 w-72 lg:w-2/4 text-tiktok-500 lg:pl-5">
                 <h3 class="text-xl lg:text-2xl">SOBRE MIM</h3>
                 <h4 class="text-lg lg:text-xl">Caxias - MA</h4>
-                <p class="text-start leading-6 text-base lg:text-lg">
+                <p class="text-center lg:text-start leading-6 text-base lg:text-lg">
                     Meu nome é Felipe, tenho 20 anos e estou na metade do curso de Análise e Desenvolvimento de Sistema. Atualmente, estou aprimorando minhas habilidades para atuar como Desenvolvedor Front-End, com as tecnologias Vue.js e TailwindCSS. Apesar do meu foco ser a construção de interfaces, possuo conhecimento em API's e em linguagem do lado do servidor com PHP, podendo construir pequenos sistemas.
                 </p>
                 <!-- buttons -->
-                <div class="flex justify-center items-center gap-5 mt-5">
+                <div class="flex justify-center items-center gap-5 mt-5 text-tiktok-500">
                     <ButtonVue
                         @click="Ancora(btn.linkedin)"
                         :tag="btn.curriculo"
                         :style="{ borderColor: animatedColor }"
-                        class="w-32 md:w-48 h-12 text-lg rounded-lg  border border-2 animated-border scale-95 hover:scale-100"
+                        class="w-36 md:w-48 h-12 text-base lg:text-lg rounded-lg border border-2 animated-border scale-95 hover:scale-100"
                     />
 
                     <ButtonVue
                         @click="Ancora(btn.github)"
                         :tag="btn.whats"
-                        class="w-32 md:w-48 h-12 text-lg rounded-lg border border-2 scale-95 hover:scale-100"
+                        class="w-36 md:w-48 h-12 text-base lg:text-lg rounded-lg border border-2 scale-95 hover:scale-100"
                     />
                 </div>
             </div>
             
         </section>
         <!-- Projetos -->
-        <section id="projects" class="flex lg:flex-wrap flex-col lg:flex-row justify-center items-center gap-8 w-full min-h-screen p-10 mt-10 mb-10">
-            <div>
+        <section id="projects" class="flex flex-col justify-center items-center gap-8 w-full min-h-screen p-10 mt-10 mb-10 text-tiktok-500">
+            <div class="mb-2">
                 <h3 class="text-xl lg:text-2xl">PROJETOS</h3>
             </div>
-            <div class="flex lg:flex-wrap flex-col lg:flex-row justify-center items-center gap-6 w-full">
-                <div
-                    class="flex justify-center items-center h-72 w-80 md:h-80 md:w-96 bg-red-500 rounded">
-                </div>
-                <div
-                    class="flex justify-center items-center h-72 w-80 md:h-80 md:w-96 bg-red-500 rounded">
-                </div>
-                <div
-                    class="flex justify-center items-center h-72 w-80 md:h-80 md:w-96 bg-red-500 rounded">
-                </div>
-                <div
-                    class="flex justify-center items-center h-72 w-80 md:h-80 md:w-96 bg-red-500 rounded">
-                </div>
-                <div
-                    class="flex justify-center items-center h-72 w-80 md:h-80 md:w-96 bg-red-500 rounded">
-                </div><div
-                    class="flex justify-center items-center h-72 w-80 md:h-80 md:w-96 bg-red-500 rounded">
-                </div>
+            <div class="flex lg:flex-wrap flex-col lg:flex-row justify-center items-center gap-11 w-full h-auto lg:w-4/5">
+                <CardView 
+                    v-for="project in projects"
+                    :key="project.id"
+                    :project="project"
+                    class="flex flex-col justify-center items-center rounded-xl w-88 lg:w-45 shadow overflow-hidden border-2"
+                />
             </div>
         </section>
         <!-- Footer -->
@@ -169,11 +158,12 @@
 
 <script>
 import ButtonVue from './components/Button.vue'
+import CardView from './components/Card.vue'
 export default {
     name : 'App',
 
     components : {
-        ButtonVue
+        ButtonVue, CardView
     },
 
     data() {
@@ -224,6 +214,12 @@ export default {
         }
     },
 
+    computed: {
+        projects() {
+            return this.$store.state.projects
+        }
+    },
+
     methods : {
         ToggleHamburguer() {
             this.isMobile = !this.isMobile
@@ -242,6 +238,10 @@ export default {
         }
     },
 
+    async created() {
+        await this.$store.dispatch('getProjetcs')
+    },
+
     mounted() {
         window.addEventListener('resize', this.UpdateWidth)
     },
@@ -255,9 +255,9 @@ export default {
 <style scoped>
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap');
     @import url('https://cdn-uicons.flaticon.com/2.0.0/uicons-brands/css/uicons-brands.css');
-    @import url('https://cdn-uicons.flaticon.com/2.0.0/uicons-regular-rounded/css/uicons-regular-rounded.css')
+    @import url('https://cdn-uicons.flaticon.com/2.0.0/uicons-regular-rounded/css/uicons-regular-rounded.css');
 
-     *::-webkit-scrollbar {
+    *::-webkit-scrollbar {
         display: none;
     }
 

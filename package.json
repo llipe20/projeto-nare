@@ -6,7 +6,8 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "tailwind:build": "postcss src/styles.css -o src/styles.css",
-    "tailwind:watch": "postcss src/styles.css -o src/styles.css --watch"
+    "tailwind:watch": "postcss src/styles.css -o src/styles.css --watch",
+    "api" : "json-server --watch db/db.json"
   },
   "dependencies": {
     "vue": "^3.2.13",
