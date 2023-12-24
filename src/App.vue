@@ -1,5 +1,5 @@
 <template>
-    <div class="flex flex-col justify-center items-center w-screen min-h-screen bg-background-100 text-white font-text overflow-x-hidden text-tiktok-500 relative">
+    <div class="flex flex-col justify-center items-center w-screen min-h-screen bg-background-100 text-white font-text overflow-x-hidden text-white lg:text-tiktok-500 relative">
         <!-- Header -->
         <section id="home" class="flex justify-center items-center w-full h-screen ">
             <header class="flex flex-col md:flex-row justify-center lg:justify-around items-center gap-10 lg:gap-0 w-full h-full">
@@ -54,6 +54,7 @@
                         </button>   
                     </div>
                 </nav>
+                <!-- ocupa o espaço da nav -->
                 <div 
                     v-if="width < 580"
                     class="w-full h-20">
@@ -73,7 +74,7 @@
                     </div>
                     <!-- tech skills -->
                     <ul 
-                        class="flex flex-row gap-3 w-2/3 md:w-auto justify-center items-center text-tiktok-500"  
+                        class="flex flex-row gap-3 w-2/3 md:w-auto justify-center items-center text-white lg:text-tiktok-500"  
                     >
                         <img 
                             v-for="skill in skills" 
@@ -83,35 +84,35 @@
                             :src="skill.logo"
                         >
                     </ul>
-                    <!-- buttons -->
-                    <div class="flex justify-center items-center gap-5 text-tiktok-500">
+                    <!-- buttons (linkedin e github) -->
+                    <div class="flex justify-center items-center gap-5 text-white lg:text-tiktok-500">
                         <ButtonVue
                             @click="Ancora('https://www.linkedin.com/in/felipe-silva--/')"
                             :tag="btn.linkedin"
                             :class="borderClass"
-                            class="w-32 md:w-48 h-12 text-lg rounded-lg border-anima-v shadow scale-95 hover:scale-100"
+                            class="w-32 md:w-48 h-12 text-lg rounded-lg border-2 lg:border-3 border-anima-v shadow scale-95 hover:scale-100"
                         />
-
+                        <!-- github -->
                         <ButtonVue
                             @click="Ancora('https://github.com/llipe20')"
                             :tag="btn.github"
-                            class="w-32 md:w-48 h-12 text-lg rounded-lg border-anima-c scale-95 hover:scale-100"
+                            class="w-32 md:w-48 h-12 text-lg rounded-lg border-2 lg:border-3 border-anima-c scale-95 hover:scale-100"
                         />
                     </div>
                 </div>
-                <!-- bloco para imagem -->
+                <!-- bloco para imagem cartton -->
                 <div class="flex justify-center items-center w-80 lg:w-1/4 h-80 border-2 rounded-lg invisible">
-                     Imagem aqui
+                     <img src="/llpe-cartoon.png" alt="felipe-cartoon">
                 </div>
             </header>
         </section>
         <!-- Sobre min -->
-        <section id="about" class="flex flex-col lg:flex-row justify-center items-center gap-6 w-full min-h-screen bg-background-500 pt-10 pb-10 mt-5 mb-5 lg:m-0 lg:p-0">
+        <section id="about" class="flex flex-col lg:flex-row justify-center items-center gap-6 w-full min-h-screen pt-10 pb-10 mt-5 mb-5 lg:m-0 lg:p-0">
             <!-- bloco para imagem -->
             <div class="flex justify-center items-center w-80 lg:w-1/4 h-80 border-2 rounded-lg invisible">
                     Imagem aqui
             </div>
-            <div class="flex flex-col justify-center items-center lg:items-start gap-3 w-72 lg:w-2/4 text-tiktok-500 lg:pl-5 invisible">
+            <div class="flex flex-col justify-center items-center lg:items-start gap-3 w-72 lg:w-2/4 text-white lg:text-tiktok-500 lg:pl-5 invisible">
                 <h3 class="text-xl lg:text-2xl">
                     SOBRE MIM
                 </h3>
@@ -121,26 +122,25 @@
                 <p class="text-center lg:text-start leading-6 text-base lg:text-lg">
                     Meu nome é Felipe, tenho 20 anos e estou na metade do curso de Análise e Desenvolvimento de Sistema. Atualmente, estou aprimorando minhas habilidades para atuar como Desenvolvedor Front-End, com as tecnologias Vue.js e TailwindCSS. Apesar do meu foco ser a construção de interfaces, possuo conhecimento em API's e em linguagem do lado do servidor com PHP, podendo construir pequenos sistemas.
                 </p>
-                <!-- buttons -->
-                <div class="flex justify-center items-center gap-5 mt-5 text-tiktok-500">
+                <!-- buttons (curriculo e whats) -->
+                <div class="flex justify-center items-center gap-5 mt-5 text-white lg:text-tiktok-500">
                     <ButtonVue
                         @click="Ancora(btn.linkedin)"
                         :tag="btn.curriculo"
                         :style="{ borderColor: animatedColor }"
-                        class="w-36 md:w-48 h-12 text-base lg:text-lg rounded-lg border-anima-v shadow scale-95 hover:scale-100"
+                        class="w-36 md:w-48 h-12 text-base lg:text-lg rounded-lg border-2 lg:border-3 border-anima-v shadow scale-95 hover:scale-100"
                     />
-
+                    <!-- whats -->
                     <ButtonVue
                         @click="Ancora('https://wa.me/qr/O43EG6NVZ3QCE1')"
                         :tag="btn.whats"
-                        class="w-36 md:w-48 h-12 text-base lg:text-lg rounded-lg border-anima-c shadow scale-95 hover:scale-100"
+                        class="w-36 md:w-48 h-12 text-base lg:text-lg rounded-lg border-2 lg:border-3 border-anima-c shadow scale-95 hover:scale-100"
                     />
                 </div>
             </div>
-            
         </section>
         <!-- Projetos -->
-        <section id="projects" class="flex flex-col justify-center items-center gap-8 w-full min-h-screen p-10 mt-10 mb-10 text-tiktok-500">
+        <section id="projects" class="flex flex-col justify-center items-center gap-8 w-full min-h-screen p-10 mt-10 mb-10 text-white lg:text-tiktok-500">
             <div class="mb-2 invisible">
                 <h3 class="text-xl lg:text-2xl">PROJETOS</h3>
             </div>
@@ -172,8 +172,8 @@ export default {
 
     data() {
         return {
-            logo : '<llPE/>',
             isMobile : false,
+            logo : '<llPE/>',
             width: window.innerWidth,
             btn : {
               linkedin : '<i class="fi fi-brands-linkedin"></i><span>Linkedin</span>',
@@ -181,70 +181,33 @@ export default {
               whats : '<i class="fi fi-brands-whatsapp"></i><span>WhatsApp</span>',
               curriculo : '<i class="fi fi-rr-cloud-download-alt"></i><span>Currículo</span>'
             },
-            skills : [
-                {
-                    name : 'Vue.js',
-                    logo : 'https://raw.githubusercontent.com/devicons/devicon/master/icons/vuejs/vuejs-original.svg'
-                },
-                {
-                    name : 'TailwindCSS',
-                    logo : 'https://raw.githubusercontent.com/devicons/devicon/master/icons/tailwindcss/tailwindcss-plain.svg'
-                },
-                {
-                    name : 'SASS',
-                    logo : 'https://raw.githubusercontent.com/devicons/devicon/master/icons/sass/sass-original.svg'
-                },
-                {
-                    name : 'Java Script',
-                    logo : 'https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg'
-                },
-                {
-                    name : 'HTML5',
-                    logo : 'https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg'
-                },
-                {
-                    name : 'CSS3',
-                    logo : 'https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg'
-                },
-                {
-                    name : 'PHP',
-                    logo : 'https://raw.githubusercontent.com/devicons/devicon/master/icons/php/php-original.svg'
-                },
-                {
-                    name : 'MySQL',
-                    logo : 'https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original.svg'
-                }
-            ]
-        }
-    },
-
-    computed: {
-        projects() {
-            return this.$store.state.projects
+            skills : this.$store.state.tech,
+            projects : this.$store.state.projects
         }
     },
 
     methods : {
+        // Resposividade da nav
         ToggleHamburguer() {
             this.isMobile = !this.isMobile
         },
 
+        // Atualiza a largura da tela para facilitar a resposividade
         UpdateWidth() {
             this.width = window.innerWidth
         },
 
+        // direcionar os links para as páginas de destinos
         Ancora(acesso) {
             window.open(`${acesso}`, '_blank')
         }
     },
 
-    async created() {
-        await this.$store.dispatch('getProjetcs')
-    },
-
     mounted() {
+        // Evento que pega a largura atual de uma tela
         window.addEventListener('resize', this.UpdateWidth)
 
+        // Evento para observar se os elementos (blocos sections) estão visiveis em tela no momento
         const myObserve = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 console.log(entry);
@@ -272,15 +235,17 @@ export default {
     @import url('https://cdn-uicons.flaticon.com/2.0.0/uicons-regular-rounded/css/uicons-regular-rounded.css');
     @import url('https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500&display=swap');
 
-
+    /* Remover barra de rolagem nativa do navegador */
     ::-webkit-scrollbar {
         display: none;
     }
 
+    /* Rolagem suave da página */
     html {
         scroll-behavior: smooth;
     }
 
+    /* Efeitos de entrada dos elementos */
     .invisible {
         opacity: 1;
         filter: blur(10px);
@@ -302,6 +267,7 @@ export default {
         font-family: 'Anton', sans-serif;
     }
 
+    /* Efeito de hover nos links nav */
     li > a::after {
         content: "";
         position: absolute;
@@ -318,28 +284,28 @@ export default {
         left: 0;
     }
 
+    /* animação das bordas dos bottons */
     @keyframes colors {
         0% {
-            border: solid 3px #4400cc;
+            border-color: #4400cc;
         }
         50% {
-            border: solid 3px #047d96;
+            border-color: #047d96;
         }
         100% {
-            border: solid 3px #4b0474;
+            border-color: #4b0474;
         }
     }
 
     .border-anima-v {
-        border: solid 2px;
         animation: colors 5s ease-in-out infinite alternate-reverse;
     }
 
     .border-anima-c {
-        border: solid 2px;
         animation: colors 5s ease-in-out infinite alternate;
     }
 
+    /* Efeito de digitação */
     @keyframes cursor {
         0% {
             border-left: 2px solid #0D1117;
@@ -365,6 +331,4 @@ export default {
         background-color: #0D1117;
         right: -16px;
     }
-
-
 </style>

@@ -1,17 +1,21 @@
 <template>
     <div class="flex flex-col justify-center items-center w-full lg:h-100 h-auto">
         <div class="flex justify-center items-center w-full h-40">
-            <!-- imagem de fundo -->
+            <!-- imagem do projeto -->
             Imagem do projeto
         </div>
+        <!-- Caixa de informações do projeto --> 
         <div class="flex flex-col justify-center items-center gap-3 w-full h-auto lg:h-3/4  p-5 pb-7">
             <h2 class="text-xl lg:text-2xl text-center">
+                <!-- nome -->
                 {{ project.title }}
             </h2>
             <h3 class="text-lg lg:text-xl text-tiktok-100">
+                <!-- sub titulo -->
                 {{ project.sub_title }}
             </h3>
             <p class="w-11/12 text-center">
+                <!-- descrição -->
                 {{ project.overview }}
             </p>
             <!-- tech ultilizadas -->
@@ -27,19 +31,19 @@
                     </span>
                 </div>
             </div>
-            <!-- buttons -->
+            <!-- buttons (link de acesso e repositório) -->
             <div class="flex justify-center items-center gap-3 text-base lg:text-lg mb-2">
                 <ButtonVue
                     @click="Ancora(project.link_site)"
                     :tag="link"
                     :style="{ borderColor: animatedColor }"
-                    class="w-36 md:w-44 h-12 rounded-lg border-anima-v shadow scale-95 hover:scale-100"
+                    class="w-36 md:w-44 h-12 rounded-lg border-2 lg:border-3 border-anima-v shadow scale-95 hover:scale-100"
                 />
 
                 <ButtonVue
                     @click="Ancora(project.link_github)"
                     :tag="github"
-                    class="w-36 md:w-44 h-12 rounded-lg border-anima-c shadow scale-95 hover:scale-100"
+                    class="w-36 md:w-44 h-12 rounded-lg border-2 lg:border-3 border-anima-c shadow scale-95 hover:scale-100"
                 />
             </div>
         </div>
@@ -77,26 +81,4 @@ export default {
     @import url('https://cdn-uicons.flaticon.com/2.0.0/uicons-brands/css/uicons-brands.css');
     @import url('https://cdn-uicons.flaticon.com/2.0.0/uicons-regular-rounded/css/uicons-regular-rounded.css');
     @import url('https://cdn-uicons.flaticon.com/2.0.0/uicons-bold-rounded/css/uicons-bold-rounded.css');
-
-    @keyframes colors {
-        0% {
-            border: solid 3px #047d96;
-        }
-        50% {
-            border: solid 3px #4400cc;
-        }
-        100% {
-            border: solid 3px #4b0474;
-        }
-    }
-
-    .border-anima-v {
-        border: solid 2px;
-        animation: colors 5s ease-in-out infinite alternate-reverse;
-    }
-
-    .border-anima-c {
-        border: solid 2px;
-        animation: colors 5s ease-in-out infinite alternate;
-    }
 </style>
