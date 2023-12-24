@@ -64,7 +64,7 @@
                         <p>
                             OIE, EU SOU O
                         </p>
-                        <h1 class="text-4xl md:text-5xl p-2 pl-0 text-tiktok-100">
+                        <h1 id="nome" class="text-4xl md:text-5xl p-2 pl-0 pr-0 text-tiktok-100 relative w-70 lg:w-88">
                             FELIPE C SILVA
                         </h1>
                         <h2>
@@ -144,12 +144,12 @@
             <div class="mb-2 invisible">
                 <h3 class="text-xl lg:text-2xl">PROJETOS</h3>
             </div>
-            <div id="box-project" class="flex lg:flex-wrap flex-col lg:flex-row justify-center items-center gap-11 w-full h-auto lg:w-4/5">
+            <div id="box-project" class="flex lg:flex-wrap flex-col lg:flex-row justify-center items-center gap-11 w-full h-auto lg:w-4/5 invisible">
                 <CardView 
                     v-for="project in projects"
                     :key="project.id"
                     :project="project"
-                    class="flex flex-col justify-center items-center gap-2 rounded-xl w-88 lg:w-45 shadow overflow-hidden border-2 invisible"
+                    class="flex flex-col justify-center items-center gap-2 rounded-xl w-88 lg:w-45 shadow overflow-hidden border-2"
                 />
             </div>
         </section>
@@ -339,4 +339,32 @@ export default {
         border: solid 2px;
         animation: colors 5s ease-in-out infinite alternate;
     }
+
+    @keyframes cursor {
+        0% {
+            border-left: 2px solid #0D1117;
+        }
+    }
+
+    @keyframes digitar {
+        10%, 15%, 30%, 35%, 50%, 55%, 70%, 75%, 90%, 95% {
+            width: 0;
+        }
+        5%, 20%, 25%,  40%, 45%, 60%, 65%, 80%, 85% {
+            width : calc(100% + 18px);
+        }
+    }
+
+    #nome::after {
+        content: '';
+        border-left: 2px solid #0077cc;
+        position: absolute;
+        animation: cursor .4s infinite alternate, digitar 40s steps(20) infinite;
+        width: 100%;
+        height: 80%;
+        background-color: #0D1117;
+        right: -16px;
+    }
+
+
 </style>
