@@ -23,6 +23,11 @@
                     "id" : 3,
                     "name" : "Java Script",
                     "logo" : "https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg"
+                },
+                {
+                    "id" : 4,
+                    "name" : "CSS",
+                    "logo" : "https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg"
                 }
             ]
         },
@@ -52,6 +57,11 @@
                 },
                 {
                     "id" : 4,
+                    "name" : "CSS",
+                    "logo" : "https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg"
+                },
+                {
+                    "id" : 5,
                     "name" : "API TMDB",
                     "icon" : "https://i.ibb.co/NTxkdxQ/api.png"
                 }

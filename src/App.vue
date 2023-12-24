@@ -59,7 +59,7 @@
                     class="w-full h-20">
                 </div>
                 <!-- bloco para apresentação -->
-                <div class="flex flex-col justify-center items-center lg:items-start gap-6 text-xl md:text-3xl">
+                <div class="flex flex-col justify-center items-center lg:items-start gap-6 text-xl md:text-3xl invisible">
                     <div class="flex flex-col justify-center gap-2 text-tiktok-500">
                         <p>
                             OIE, EU SOU O
@@ -78,7 +78,7 @@
                         <img 
                             v-for="skill in skills" 
                             :key="skill.name"
-                            class="w-8 h-6 lg:w-10 lg:h-8"
+                            class="w-8 h-6 lg:w-10 lg:h-8 scale-95 hover:scale-100"
                             :alt="skill.name" 
                             :src="skill.logo"
                         >
@@ -89,29 +89,29 @@
                             @click="Ancora('https://www.linkedin.com/in/felipe-silva--/')"
                             :tag="btn.linkedin"
                             :class="borderClass"
-                            class="w-32 md:w-48 h-12 text-lg rounded-lg  border border-2 animated-border scale-95 hover:scale-100"
+                            class="w-32 md:w-48 h-12 text-lg rounded-lg border-anima-v shadow scale-95 hover:scale-100"
                         />
 
                         <ButtonVue
                             @click="Ancora('https://github.com/llipe20')"
                             :tag="btn.github"
-                            class="w-32 md:w-48 h-12 text-lg rounded-lg border border-2 scale-95 hover:scale-100"
+                            class="w-32 md:w-48 h-12 text-lg rounded-lg border-anima-c scale-95 hover:scale-100"
                         />
                     </div>
                 </div>
                 <!-- bloco para imagem -->
-                <div class="flex justify-center items-center w-80 lg:w-1/4 h-80 border-2 rounded-lg">
+                <div class="flex justify-center items-center w-80 lg:w-1/4 h-80 border-2 rounded-lg invisible">
                      Imagem aqui
                 </div>
             </header>
         </section>
         <!-- Sobre min -->
-        <section id="about" class="flex flex-col lg:flex-row justify-center items-center gap-6 w-full h-screen bg-background-500">
+        <section id="about" class="flex flex-col lg:flex-row justify-center items-center gap-6 w-full min-h-screen bg-background-500 pt-10 pb-10 mt-5 mb-5 lg:m-0 lg:p-0">
             <!-- bloco para imagem -->
-            <div class="flex justify-center items-center w-80 lg:w-1/4 h-80 border-2 rounded-lg">
+            <div class="flex justify-center items-center w-80 lg:w-1/4 h-80 border-2 rounded-lg invisible">
                     Imagem aqui
             </div>
-            <div class="flex flex-col justify-center items-center lg:items-start gap-3 w-72 lg:w-2/4 text-tiktok-500 lg:pl-5">
+            <div class="flex flex-col justify-center items-center lg:items-start gap-3 w-72 lg:w-2/4 text-tiktok-500 lg:pl-5 invisible">
                 <h3 class="text-xl lg:text-2xl">
                     SOBRE MIM
                 </h3>
@@ -127,13 +127,13 @@
                         @click="Ancora(btn.linkedin)"
                         :tag="btn.curriculo"
                         :style="{ borderColor: animatedColor }"
-                        class="w-36 md:w-48 h-12 text-base lg:text-lg rounded-lg border border-2 animated-border scale-95 hover:scale-100"
+                        class="w-36 md:w-48 h-12 text-base lg:text-lg rounded-lg border-anima-v shadow scale-95 hover:scale-100"
                     />
 
                     <ButtonVue
                         @click="Ancora('https://wa.me/qr/O43EG6NVZ3QCE1')"
                         :tag="btn.whats"
-                        class="w-36 md:w-48 h-12 text-base lg:text-lg rounded-lg border border-2 scale-95 hover:scale-100"
+                        class="w-36 md:w-48 h-12 text-base lg:text-lg rounded-lg border-anima-c shadow scale-95 hover:scale-100"
                     />
                 </div>
             </div>
@@ -141,15 +141,15 @@
         </section>
         <!-- Projetos -->
         <section id="projects" class="flex flex-col justify-center items-center gap-8 w-full min-h-screen p-10 mt-10 mb-10 text-tiktok-500">
-            <div class="mb-2">
+            <div class="mb-2 invisible">
                 <h3 class="text-xl lg:text-2xl">PROJETOS</h3>
             </div>
-            <div class="flex lg:flex-wrap flex-col lg:flex-row justify-center items-center gap-11 w-full h-auto lg:w-4/5">
+            <div id="box-project" class="flex lg:flex-wrap flex-col lg:flex-row justify-center items-center gap-11 w-full h-auto lg:w-4/5">
                 <CardView 
                     v-for="project in projects"
                     :key="project.id"
                     :project="project"
-                    class="flex flex-col justify-center items-center rounded-xl w-88 lg:w-45 shadow overflow-hidden border-2"
+                    class="flex flex-col justify-center items-center gap-2 rounded-xl w-88 lg:w-45 shadow overflow-hidden border-2 invisible"
                 />
             </div>
         </section>
@@ -244,6 +244,21 @@ export default {
 
     mounted() {
         window.addEventListener('resize', this.UpdateWidth)
+
+        const myObserve = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                console.log(entry);
+                if(entry.isIntersecting) {
+                    entry.target.classList.remove('invisible')
+                    entry.target.classList.add('show')
+                } else {
+                    entry.target.classList.remove('show')
+                    entry.target.classList.add('invisible')
+                }
+            })
+        }, { threshold: 0.5 })
+        const elements = document.querySelectorAll('.invisible')
+        elements.forEach(element => myObserve.observe(element))
     },
 
     beforeDestroy() {
@@ -252,14 +267,31 @@ export default {
   }
 </script>
 
-<style scoped>
+<style>
     @import url('https://cdn-uicons.flaticon.com/2.0.0/uicons-brands/css/uicons-brands.css');
     @import url('https://cdn-uicons.flaticon.com/2.0.0/uicons-regular-rounded/css/uicons-regular-rounded.css');
     @import url('https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500&display=swap');
 
 
-    *::-webkit-scrollbar {
+    ::-webkit-scrollbar {
         display: none;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    .invisible {
+        opacity: 1;
+        filter: blur(10px);
+        transform: translateX(-50%);
+        transition: all 1000ms;
+    }
+
+    .show {
+        opacity: 1;
+        filter: blur(0);
+        transition: all 1000ms;
     }
 
     .font-text {
@@ -286,4 +318,25 @@ export default {
         left: 0;
     }
 
+    @keyframes colors {
+        0% {
+            border: solid 3px #4400cc;
+        }
+        50% {
+            border: solid 3px #047d96;
+        }
+        100% {
+            border: solid 3px #4b0474;
+        }
+    }
+
+    .border-anima-v {
+        border: solid 2px;
+        animation: colors 5s ease-in-out infinite alternate-reverse;
+    }
+
+    .border-anima-c {
+        border: solid 2px;
+        animation: colors 5s ease-in-out infinite alternate;
+    }
 </style>

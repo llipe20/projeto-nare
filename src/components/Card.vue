@@ -33,13 +33,13 @@
                     @click="Ancora(project.link_site)"
                     :tag="link"
                     :style="{ borderColor: animatedColor }"
-                    class="w-36 md:w-44 h-12 rounded-lg border border-2 animated-border scale-95 hover:scale-100"
+                    class="w-36 md:w-44 h-12 rounded-lg border-anima-v shadow scale-95 hover:scale-100"
                 />
 
                 <ButtonVue
                     @click="Ancora(project.link_github)"
                     :tag="github"
-                    class="w-36 md:w-44 h-12 rounded-lg border border-2 scale-95 hover:scale-100"
+                    class="w-36 md:w-44 h-12 rounded-lg border-anima-c shadow scale-95 hover:scale-100"
                 />
             </div>
         </div>
@@ -76,5 +76,27 @@ export default {
 <style scoped>
     @import url('https://cdn-uicons.flaticon.com/2.0.0/uicons-brands/css/uicons-brands.css');
     @import url('https://cdn-uicons.flaticon.com/2.0.0/uicons-regular-rounded/css/uicons-regular-rounded.css');
-    @import url('https://cdn-uicons.flaticon.com/2.0.0/uicons-bold-rounded/css/uicons-bold-rounded.css')
+    @import url('https://cdn-uicons.flaticon.com/2.0.0/uicons-bold-rounded/css/uicons-bold-rounded.css');
+
+    @keyframes colors {
+        0% {
+            border: solid 3px #047d96;
+        }
+        50% {
+            border: solid 3px #4400cc;
+        }
+        100% {
+            border: solid 3px #4b0474;
+        }
+    }
+
+    .border-anima-v {
+        border: solid 2px;
+        animation: colors 5s ease-in-out infinite alternate-reverse;
+    }
+
+    .border-anima-c {
+        border: solid 2px;
+        animation: colors 5s ease-in-out infinite alternate;
+    }
 </style>
