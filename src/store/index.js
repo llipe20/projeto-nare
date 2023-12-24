@@ -13,7 +13,7 @@ export default createStore({
   },
   actions: {
       getProjetcs : async ({commit}) => {
-          const req = await fetch('http://localhost:3000/projects')
+          const req = await fetch('https://json-server-rho-brown.vercel.app/projects')
           const res = await req.json()
 
           commit("UpdateProjetc", res)
