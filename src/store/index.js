@@ -9,7 +9,7 @@ export default createStore({
             "sub_title" : "projeto Havartz",
             "link_site" : "https://projeto-havertz.vercel.app/",
             "link_github" : "https://github.com/llipe20/projeto-havertz", 
-            "backdrop" : "",
+            "backdrop" : "https://i.ibb.co/wsrj2Rp/havarts.jpg",
             "overview" : "Pequena aplicação de uma lojinha de venda online de mangás japoneses. O objetivo principal é práticar os conhecimentos aquiridos em Tailwindcss, utilizando sua enorme biblioteca para criar uma interface simples e de fácil navegação. Usei json-serve para facilitar a manipulação dos dados dos produtos e Vue.js, juntamente com suas bibliotecas - vuex e vue routers - para orquestrar o sistema.",
             "tech_skills" : [
                 {
@@ -40,7 +40,7 @@ export default createStore({
             "sub_title" : "projeto Akuma no mi",
             "link_site" : "https://projeto-akuma-no-mi.vercel.app/",
             "link_github" : "https://github.com/llipe20/projeto-akuma-no-mi", 
-            "backdrop" : "",
+            "backdrop" : "https://i.ibb.co/vZWVKyv/akuma.jpg",
             "overview" : "Projeto criado para um trabalho da faculdade que me rendeu nota máxima, aplicando conhecimentos adquiridos em Vue.js, Tailwind e API´s, consumindo a enorme biblioteca de filmes disponibilizada pela The Movie Database. O sistema de login da aplicação foi implementado usando json-serve como banco de dados improvisado.",
             "tech_skills" : [
                 {
@@ -66,7 +66,7 @@ export default createStore({
                 {
                     "id" : 5,
                     "name" : "API TMDB",
-                    "icon" : "https://i.ibb.co/NTxkdxQ/api.png"
+                    "icon" : "https://i.ibb.co/z58rcBC/logo-tmdb.jpg"
                 }
             ]
           }
@@ -104,6 +104,43 @@ export default createStore({
               name : 'MySQL',
               logo : 'https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original.svg'
           }
+      ],
+      links : [
+        {
+          id : 1,
+          name : 'Linkedin',
+          icon : '<i class="fi fi-brands-linkedin"></i>',
+          span : '<span>Linkedin</span>',
+          ancora : 'https://www.linkedin.com/in/felipe-silva--/'
+        },
+        {
+          id : 2,
+          name : 'Github',
+          icon : '<i class="fi fi-brands-github"></i>',
+          span : '<span>Github</span>',
+          ancora : 'https://github.com/llipe20'
+        },
+        {
+          id : 3,
+          name : 'Currículo',
+          icon : '<i class="fi fi-rr-cloud-download-alt"></i>',
+          span : '<span>Currículo</span>',
+          ancora : ''
+        },
+        {
+          id : 4,
+          name : 'WhatsApp',
+          icon : '<i class="fi fi-brands-whatsapp"></i>',
+          span : '<span>WhatsApp</span>',
+          ancora : 'https://wa.me/qr/O43EG6NVZ3QCE1' 
+        },
+        {
+          id : 5,
+          name : 'Instagram',
+          icon : '<i class="fi fi-brands-instagram"></i>',
+          span : '<span>Instagram</span>',
+          ancora : 'https://instagram.com/___llpe'
+        }
       ]
   },
   getters: {

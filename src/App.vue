@@ -15,22 +15,22 @@
                             class="flex flex-col xl:flex-row justify-center xl:justify-between items-center gap-3 xl:gap-0 h-auto xl:h-full w-44 xl:w-full p-4 xl:p-0 text-lg text-start absolute xl:static top-full right-[-30px] bg-background-900 transition-all duration-100"
                             v-if="isMobile || width > 1280" 
                         >
-                            <li class="w-5/6 xl:w-auto relative">
+                            <li class="maho w-5/6 xl:w-auto relative">
                                 <a href="#home">
                                     Início
                                 </a>
                             </li>
-                            <li class="w-5/6 xl:w-auto relative">
+                            <li class="maho w-5/6 xl:w-auto relative">
                                 <a href="#about">
                                     Sobre mim
                                 </a>
                             </li>
-                            <li class="w-5/6 xl:w-auto relative">
+                            <li class="maho w-5/6 xl:w-auto relative">
                                 <a href="#projects">
                                   Projetos
                                 </a>
                             </li>
-                            <li class="w-5/6 xl:w-auto relative">
+                            <li class="maho w-5/6 xl:w-auto relative">
                                 <a href="#footer">
                                   Contato
                                 </a>
@@ -60,12 +60,12 @@
                     class="w-full h-20">
                 </div>
                 <!-- bloco para apresentação -->
-                <div class="flex flex-col justify-center items-center lg:items-start gap-6 text-xl md:text-3xl invisible">
+                <div class="flex flex-col justify-center items-center lg:items-start gap-6 text-xl lg:text-3xl invisible">
                     <div class="flex flex-col justify-center gap-2 text-tiktok-500">
                         <p>
                             OIE, EU SOU O
                         </p>
-                        <h1 id="nome" class="text-4xl md:text-5xl p-2 pl-0 pr-0 text-tiktok-100 relative w-70 lg:w-88">
+                        <h1 id="nome" class="text-4xl lg:text-5xl p-2 pl-0 pr-0 text-tiktok-100 relative w-70 lg:w-88">
                             FELIPE C SILVA
                         </h1>
                         <h2>
@@ -87,22 +87,24 @@
                     <!-- buttons (linkedin e github) -->
                     <div class="flex justify-center items-center gap-5 text-white lg:text-tiktok-500">
                         <ButtonVue
-                            @click="Ancora('https://www.linkedin.com/in/felipe-silva--/')"
-                            :tag="btn.linkedin"
+                            @click="Ancora(links[0].ancora)"
+                            :tag="links[0].icon + links[0].span"
                             :class="borderClass"
                             class="w-32 md:w-48 h-14 text-lg rounded-lg border-2 lg:border-3 border-anima-v shadow scale-95 hover:scale-100"
                         />
                         <!-- github -->
                         <ButtonVue
-                            @click="Ancora('https://github.com/llipe20')"
-                            :tag="btn.github"
+                            @click="Ancora(links[1].ancora)"
+                            :tag="links[1].icon + links[1].span"
                             class="w-32 md:w-48 h-14 text-lg rounded-lg border-2 lg:border-3 border-anima-c scale-95 hover:scale-100"
                         />
                     </div>
                 </div>
-                <!-- bloco para imagem cartton -->
-                <div class="flex justify-center items-center w-80 lg:w-98 h-80 lg:h-98 border-t-8 border-l-4 rounded-full border-anima-c invisible relative">
-                     <img src="/llpe-cartoon.png" alt="felipe-cartoon" class="w-72 lg:w-96 h-72 lg:h-96 rounded-full border-8 border-t-0 border-l-0 border-anima-v absolute">
+                <!-- bloco imagem cartton -->
+                <div class="flutuar">
+                    <div class="flex justify-center items-center w-80 lg:w-98 h-80 lg:h-98 border-t-8 border-l-4 rounded-full border-anima-c invisible relative hover:rotate-180 duration-1000">
+                        <img src="/llpe-cartoon.png" alt="felipe-cartoon" class="w-72 lg:w-96 h-72 lg:h-96 rounded-full border-8 border-t-0 border-l-0 border-anima-v absolute hover:rotate-180 duration-1000">
+                    </div>
                 </div>
             </header>
         </section>
@@ -125,37 +127,68 @@
                 <!-- buttons (curriculo e whats) -->
                 <div class="flex justify-center items-center gap-5 mt-5 text-white lg:text-tiktok-500">
                     <ButtonVue
-                        @click="Ancora(btn.linkedin)"
-                        :tag="btn.curriculo"
+                        @click="Ancora(links[2].ancora)"
+                        :tag="links[2].icon + links[2].span"
                         :style="{ borderColor: animatedColor }"
                         class="w-36 md:w-48 h-14 text-base lg:text-lg rounded-lg border-2 lg:border-3 border-anima-v shadow scale-95 hover:scale-100"
                     />
                     <!-- whats -->
                     <ButtonVue
-                        @click="Ancora('https://wa.me/qr/O43EG6NVZ3QCE1')"
-                        :tag="btn.whats"
+                        @click="Ancora(links[3].ancora)"
+                        :tag="links[3].icon + links[3].span"
                         class="w-36 md:w-48 h-14 text-base lg:text-lg rounded-lg border-2 lg:border-3 border-anima-c shadow scale-95 hover:scale-100"
                     />
                 </div>
             </div>
         </section>
         <!-- Projetos -->
-        <section id="projects" class="flex flex-col justify-center items-center gap-8 w-full min-h-screen p-10 mt-10 mb-10 text-white lg:text-tiktok-500">
+        <section id="projects" class="flex flex-col justify-center items-center gap-8 w-full min-h-screen p-10 lg:mt-10 lg:mb-10 text-white lg:text-tiktok-500">
             <div class="mb-2 invisible">
                 <h3 class="text-xl lg:text-2xl">PROJETOS</h3>
             </div>
-            <div id="box-project" class="flex lg:flex-wrap flex-col lg:flex-row justify-center items-center gap-11 w-full h-auto lg:w-4/5">
+            <ul id="box-project" class="flex lg:flex-wrap flex-col lg:flex-row justify-center items-center gap-11 w-full h-auto lg:w-4/5">
                 <CardView 
                     v-for="project in projects"
                     :key="project.id"
                     :project="project"
                     class="flex flex-col justify-center items-center gap-2 rounded-xl w-88 lg:w-45 shadow overflow-hidden border-2 invisible"
                 />
-            </div>
+            </ul>
         </section>
         <!-- Footer -->
-        <section id="footer" class="flex flex-col lg:flex-row justify-center items-center gap-6 w-full h-40 bg-background-900 mt-5">
-            
+        <section id="footer" class="flex flex-col justify-center items-center gap-4 w-full h-auto p-5 bg-background-900 lg:mt-5 text-sm lg:text-base">
+            <!-- logo -->
+            <div class="flex justify-center items-center h-full w-full text-tiktok-100 xl:text-2xl text-xl p-2">
+                    <span class="font-logo">
+                        {{ logo }}
+                    </span>
+            </div>
+            <!-- links de contato -->
+            <ul class="flex flex-wrap justify-center itmes-center gap-3 lg:gap-5 w-full pl-4 pr-4">
+                <li 
+                    v-for="link in links" 
+                    :key="link.id" 
+                    class="hover:text-tiktok-100"
+                >
+                    <a :href="link.ancora" class="flex justiy-center items-center gap-2">
+                        <span v-html="link.icon"></span>
+                        <span>{{ link.name }}</span>
+                    </a>
+                </li>
+            </ul>
+            <!-- créditos e copy -->
+            <div class="flex justify-center itmes-center w-full mb-2">
+                <p class="text-center pr-2 pl-2 text-base">
+                    &copy; 2023 
+                    <a href="https://github.com/llipe20/projeto-nare" class="text-tiktok-100">
+                        projeto-nare
+                    </a> 
+                    - Criado e desenvolvido por 
+                    <span class="text-tiktok-100 cursor-pointer">
+                        Felipe C Silva
+                    </span>
+                </p>
+            </div>
         </section>
     </div>
 </template>
@@ -175,13 +208,8 @@ export default {
             isMobile : false,
             logo : '<llPE/>',
             width: window.innerWidth,
-            btn : {
-              linkedin : '<i class="fi fi-brands-linkedin"></i><span>Linkedin</span>',
-              github : '<i class="fi fi-brands-github"></i><span>Github</span>',
-              whats : '<i class="fi fi-brands-whatsapp"></i><span>WhatsApp</span>',
-              curriculo : '<i class="fi fi-rr-cloud-download-alt"></i><span>Currículo</span>'
-            },
-            skills : this.$store.state.tech,
+            links : this.$store.state.links,    // contem todas informações relacionadas a contato
+            skills : this.$store.state.tech,    // informações sobre as tech
             projects : this.$store.state.projects
         }
     },
@@ -268,7 +296,7 @@ export default {
     }
 
     /* Efeito de hover nos links nav */
-    li > a::after {
+    .maho > a::after {
         content: "";
         position: absolute;
         width: 0;
@@ -279,7 +307,7 @@ export default {
         transition: all 0.3s ease-in-out; 
     }
 
-    li > a:hover::after {
+    .maho > a:hover::after {
         width: 100%; 
         left: 0;
     }
@@ -330,5 +358,18 @@ export default {
         height: 80%;
         background-color: #0D1117;
         right: -16px;
+    }
+
+    @keyframes anima {
+        0%, 100% {
+            transform: translateY(10px);
+        }
+        50% {
+            transform: translateY(-10px);
+        }
+    }
+
+    .flutuar {
+        animation: anima 4s ease-in-out infinite;
     }
 </style>

@@ -1,8 +1,11 @@
 <template>
     <div class="flex flex-col justify-center items-center w-full lg:h-100 h-auto">
-        <div class="flex justify-center items-center w-full h-40">
+        <div class="flex justify-center items-center w-full h-auto">
             <!-- imagem do projeto -->
-            Imagem do projeto
+            <img 
+                :src="project.backdrop" 
+                :alt="project.sub_title"
+            >
         </div>
         <!-- Caixa de informações do projeto --> 
         <div class="flex flex-col justify-center items-center gap-3 w-full h-auto lg:h-3/4  p-5 pb-7">
@@ -23,7 +26,7 @@
                 <div 
                     v-for="tech in project.tech_skills"
                     :key="tech.id"
-                    class="flex flex-col gap-1 justify-center items-center"
+                    class="flex flex-col gap-1 justify-center items-center scale-95 hover:scale-100"
                 >
                     <img :src="tech.logo" :alt="tech.name" class="w-8 lg:w-9 h-6 lg:h-7">
                     <span class="text-xs lg:text-sm text-center">
