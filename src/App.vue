@@ -90,19 +90,19 @@
                             @click="Ancora('https://www.linkedin.com/in/felipe-silva--/')"
                             :tag="btn.linkedin"
                             :class="borderClass"
-                            class="w-32 md:w-48 h-12 text-lg rounded-lg border-2 lg:border-3 border-anima-v shadow scale-95 hover:scale-100"
+                            class="w-32 md:w-48 h-14 text-lg rounded-lg border-2 lg:border-3 border-anima-v shadow scale-95 hover:scale-100"
                         />
                         <!-- github -->
                         <ButtonVue
                             @click="Ancora('https://github.com/llipe20')"
                             :tag="btn.github"
-                            class="w-32 md:w-48 h-12 text-lg rounded-lg border-2 lg:border-3 border-anima-c scale-95 hover:scale-100"
+                            class="w-32 md:w-48 h-14 text-lg rounded-lg border-2 lg:border-3 border-anima-c scale-95 hover:scale-100"
                         />
                     </div>
                 </div>
                 <!-- bloco para imagem cartton -->
                 <div class="flex justify-center items-center w-80 lg:w-98 h-80 lg:h-98 border-t-8 border-l-4 rounded-full border-anima-c invisible relative">
-                     <img src="/llpe-cartoon.png" alt="felipe-cartoon" class="w-72 lg:96 h-72 lg:h-96 rounded-full border-8 border-t-0 border-l-0 border-anima-v absolute">
+                     <img src="/llpe-cartoon.png" alt="felipe-cartoon" class="w-72 lg:w-96 h-72 lg:h-96 rounded-full border-8 border-t-0 border-l-0 border-anima-v absolute">
                 </div>
             </header>
         </section>
@@ -128,13 +128,13 @@
                         @click="Ancora(btn.linkedin)"
                         :tag="btn.curriculo"
                         :style="{ borderColor: animatedColor }"
-                        class="w-36 md:w-48 h-12 text-base lg:text-lg rounded-lg border-2 lg:border-3 border-anima-v shadow scale-95 hover:scale-100"
+                        class="w-36 md:w-48 h-14 text-base lg:text-lg rounded-lg border-2 lg:border-3 border-anima-v shadow scale-95 hover:scale-100"
                     />
                     <!-- whats -->
                     <ButtonVue
                         @click="Ancora('https://wa.me/qr/O43EG6NVZ3QCE1')"
                         :tag="btn.whats"
-                        class="w-36 md:w-48 h-12 text-base lg:text-lg rounded-lg border-2 lg:border-3 border-anima-c shadow scale-95 hover:scale-100"
+                        class="w-36 md:w-48 h-14 text-base lg:text-lg rounded-lg border-2 lg:border-3 border-anima-c shadow scale-95 hover:scale-100"
                     />
                 </div>
             </div>
@@ -144,12 +144,12 @@
             <div class="mb-2 invisible">
                 <h3 class="text-xl lg:text-2xl">PROJETOS</h3>
             </div>
-            <div id="box-project" class="flex lg:flex-wrap flex-col lg:flex-row justify-center items-center gap-11 w-full h-auto lg:w-4/5 invisible">
+            <div id="box-project" class="flex lg:flex-wrap flex-col lg:flex-row justify-center items-center gap-11 w-full h-auto lg:w-4/5">
                 <CardView 
                     v-for="project in projects"
                     :key="project.id"
                     :project="project"
-                    class="flex flex-col justify-center items-center gap-2 rounded-xl w-88 lg:w-45 shadow overflow-hidden border-2"
+                    class="flex flex-col justify-center items-center gap-2 rounded-xl w-88 lg:w-45 shadow overflow-hidden border-2 invisible"
                 />
             </div>
         </section>

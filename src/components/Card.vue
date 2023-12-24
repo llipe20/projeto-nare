@@ -37,13 +37,13 @@
                     @click="Ancora(project.link_site)"
                     :tag="link"
                     :style="{ borderColor: animatedColor }"
-                    class="w-36 md:w-44 h-12 rounded-lg border-2 lg:border-3 border-anima-v shadow scale-95 hover:scale-100"
+                    class="w-36 md:w-44 h-14 rounded-lg border-2 lg:border-3 border-anima-v shadow scale-95 hover:scale-100"
                 />
 
                 <ButtonVue
                     @click="Ancora(project.link_github)"
                     :tag="github"
-                    class="w-36 md:w-44 h-12 rounded-lg border-2 lg:border-3 border-anima-c shadow scale-95 hover:scale-100"
+                    class="w-36 md:w-44 h-14 rounded-lg border-2 lg:border-3 border-anima-c shadow scale-95 hover:scale-100"
                 />
             </div>
         </div>
