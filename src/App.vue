@@ -101,8 +101,8 @@
                     </div>
                 </div>
                 <!-- bloco para imagem cartton -->
-                <div class="flex justify-center items-center w-80 lg:w-1/4 h-80 border-2 rounded-lg invisible">
-                     <img src="/llpe-cartoon.png" alt="felipe-cartoon">
+                <div class="flex justify-center items-center w-80 lg:w-98 h-80 lg:h-98 border-t-8 border-l-4 rounded-full border-anima-c invisible relative">
+                     <img src="/llpe-cartoon.png" alt="felipe-cartoon" class="w-72 lg:96 h-72 lg:h-96 rounded-full border-8 border-t-0 border-l-0 border-anima-v absolute">
                 </div>
             </header>
         </section>
