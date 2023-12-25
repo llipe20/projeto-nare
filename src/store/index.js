@@ -69,7 +69,43 @@ export default createStore({
                     "icon" : "https://i.ibb.co/z58rcBC/logo-tmdb.jpg"
                 }
             ]
-          }
+        },
+        {
+            "id" : 3,
+            "title" : "API Rest + Documentação",
+            "sub_title" : "projeto Galland",
+            "link_site" : "https://api-galland.000webhostapp.com/",
+            "link_github" : "https://github.com/llipe20/projeto-galland", 
+            "backdrop" : "https://i.ibb.co/fM9C3bQ/projeto-galland.png",
+            "overview" : "O projeto consiste em desenvolver uma mini API para fazer a ponte entre um banco de dados e o front end de uma aplicação pessoal, um sistema online de pedidos/cardápiio. Foi utlizado PHP como linguagem fonte, MySQL para banco de dados e JavaScript para Front-end.",
+            "tech_skills" : [
+                {
+                    id : 1,
+                    name : 'PHP',
+                    logo : 'https://raw.githubusercontent.com/devicons/devicon/master/icons/php/php-original.svg'
+                },
+                {
+                    id : 2,
+                    name : 'MySQL',
+                    logo : 'https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original.svg'
+                },
+                {
+                    "id" : 3,
+                    "name" : "Java Script",
+                    "logo" : "https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg"
+                },
+                {
+                    "id" : 4,
+                    "name" : "Tailwind CSS",
+                    "logo" : "https://raw.githubusercontent.com/devicons/devicon/master/icons/tailwindcss/tailwindcss-plain.svg"
+                },
+                {
+                    "id" : 5,
+                    "name" : "CSS",
+                    "logo" : "https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg"
+                }
+            ]
+        }
       ],
       tech : [
           {
