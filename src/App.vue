@@ -178,7 +178,7 @@
             </ul>
             <!-- créditos e copy -->
             <div class="flex justify-center itmes-center w-full mb-2">
-                <p class="text-center pr-2 pl-2 text-base">
+                <p class="text-center pr-2 pl-2">
                     &copy; 2023 
                     <a href="https://github.com/llipe20/projeto-nare" class="text-tiktok-100">
                         projeto-nare
