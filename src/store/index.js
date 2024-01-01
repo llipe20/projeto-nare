@@ -3,38 +3,38 @@ import { createStore } from 'vuex'
 export default createStore({
   state: {
       projects : [
-          {
-            "id" : 1,
-            "title" : "E-commerce de mangás",
-            "sub_title" : "projeto Havartz",
-            "link_site" : "https://projeto-havertz.vercel.app/",
-            "link_github" : "https://github.com/llipe20/projeto-havertz", 
-            "backdrop" : "https://i.ibb.co/wsrj2Rp/havarts.jpg",
-            "overview" : "Pequena aplicação de uma lojinha de venda online de mangás japoneses. O objetivo principal é práticar os conhecimentos aquiridos em Tailwindcss, utilizando sua enorme biblioteca para criar uma interface simples e de fácil navegação. Usei json-serve para facilitar a manipulação dos dados dos produtos e Vue.js, juntamente com suas bibliotecas - vuex e vue routers - para orquestrar o sistema.",
-            "tech_skills" : [
-                {
-                    "id" : 1,
-                    "name" : "Vue.js",
-                    "logo" : "https://raw.githubusercontent.com/devicons/devicon/master/icons/vuejs/vuejs-original.svg"
-                },
-                {
-                    "id" : 2,
-                    "name" : "Tailwind CSS",
-                    "logo" : "https://raw.githubusercontent.com/devicons/devicon/master/icons/tailwindcss/tailwindcss-plain.svg"
-                },
-                {
-                    "id" : 3,
-                    "name" : "Java Script",
-                    "logo" : "https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg"
-                },
-                {
-                    "id" : 4,
-                    "name" : "CSS",
-                    "logo" : "https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg"
-                }
-            ]
-          },
-          {
+        {
+        "id" : 1,
+        "title" : "E-commerce de mangás",
+        "sub_title" : "projeto Havartz",
+        "link_site" : "https://projeto-havertz.vercel.app/",
+        "link_github" : "https://github.com/llipe20/projeto-havertz", 
+        "backdrop" : "https://i.ibb.co/wsrj2Rp/havarts.jpg",
+        "overview" : "Pequena aplicação de uma lojinha de venda online de mangás japoneses. O objetivo principal é práticar os conhecimentos aquiridos em Tailwindcss, utilizando sua enorme biblioteca para criar uma interface simples e de fácil navegação. Usei json-serve para facilitar a manipulação dos dados dos produtos e Vue.js, juntamente com suas bibliotecas - vuex e vue routers - para orquestrar o sistema.",
+        "tech_skills" : [
+            {
+                "id" : 1,
+                "name" : "Vue.js",
+                "logo" : "https://raw.githubusercontent.com/devicons/devicon/master/icons/vuejs/vuejs-original.svg"
+            },
+            {
+                "id" : 2,
+                "name" : "Tailwind CSS",
+                "logo" : "https://raw.githubusercontent.com/devicons/devicon/master/icons/tailwindcss/tailwindcss-plain.svg"
+            },
+            {
+                "id" : 3,
+                "name" : "Java Script",
+                "logo" : "https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg"
+            },
+            {
+                "id" : 4,
+                "name" : "CSS",
+                "logo" : "https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg"
+            }
+        ]
+        },
+        {
             "id" : 2,
             "title" : "Plataforma de filmes + Sistema de login",
             "sub_title" : "projeto Akuma no mi",
@@ -72,6 +72,42 @@ export default createStore({
         },
         {
             "id" : 3,
+            "title" : "Gerenciador de tarefas",
+            "sub_title" : "projeto Mahoraga",
+            "link_site" : "https://api-galland.000webhostapp.com/",
+            "link_github" : "https://github.com/llipe20/projeto-mahoraga", 
+            "backdrop" : "https://i.ibb.co/2WntWdt/backdrop-mahoraga.png",
+            "overview" : "Aplicação tem como objetivo oferecer um pequeno sistema para gerenciar projetos e trabalhos. Ele foi elaborado e moldado de acordo com minhas necessidades pessoais. Basicamente, o software lista tarefas que podem ficar visiveis para pessoas - grande utilidade para mim na faculdade. E aproveitando que estou estudando TypeScrpt e React, resolvi junto tudo em um único desafio.",
+            "tech_skills" : [
+                {
+                    id : 1,
+                    name : 'Type Script',
+                    logo : 'https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg'
+                },
+                {
+                    id : 2,
+                    name : "Java Script",
+                    logo : "https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg"
+                },
+                {
+                    id : 3,
+                    name : "React",
+                    logo : "https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg"
+                },
+                {
+                    id : 4,
+                    name : "Tailwind CSS",
+                    logo : "https://raw.githubusercontent.com/devicons/devicon/master/icons/tailwindcss/tailwindcss-plain.svg"
+                },
+                {
+                    id : 5,
+                    name : "CSS",
+                    logo : "https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg"
+                }
+            ]
+        },
+        {
+            "id" : 4,
             "title" : "API Rest + Documentação",
             "sub_title" : "projeto Galland",
             "link_site" : "https://api-galland.000webhostapp.com/",
@@ -108,38 +144,42 @@ export default createStore({
         }
       ],
       tech : [
-          {
-              name : 'Vue.js',
-              logo : 'https://raw.githubusercontent.com/devicons/devicon/master/icons/vuejs/vuejs-original.svg'
-          },
-          {
-              name : 'TailwindCSS',
-              logo : 'https://raw.githubusercontent.com/devicons/devicon/master/icons/tailwindcss/tailwindcss-plain.svg'
-          },
-          {
-              name : 'SASS',
-              logo : 'https://raw.githubusercontent.com/devicons/devicon/master/icons/sass/sass-original.svg'
-          },
-          {
-              name : 'Java Script',
-              logo : 'https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg'
-          },
-          {
-              name : 'HTML5',
-              logo : 'https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg'
-          },
-          {
-              name : 'CSS3',
-              logo : 'https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg'
-          },
-          {
-              name : 'PHP',
-              logo : 'https://raw.githubusercontent.com/devicons/devicon/master/icons/php/php-original.svg'
-          },
-          {
-              name : 'MySQL',
-              logo : 'https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original.svg'
-          }
+        {
+            name : 'Type Script',
+            logo : 'https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg'
+        },
+        {
+            name : "Java Script",
+            logo : "https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg"
+        },
+        {
+            name : "React",
+            logo : "https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg"
+        },
+        {
+            name : 'Vue.js',
+            logo : 'https://raw.githubusercontent.com/devicons/devicon/master/icons/vuejs/vuejs-original.svg'
+        },
+        {
+            name : 'TailwindCSS',
+            logo : 'https://raw.githubusercontent.com/devicons/devicon/master/icons/tailwindcss/tailwindcss-plain.svg'
+        },
+        {
+            name : 'HTML5',
+            logo : 'https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg'
+        },
+        {
+            name : 'CSS3',
+            logo : 'https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg'
+        },
+        {
+            name : 'PHP',
+            logo : 'https://raw.githubusercontent.com/devicons/devicon/master/icons/php/php-original.svg'
+        },
+        {
+            name : 'MySQL',
+            logo : 'https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original.svg'
+        }
       ],
       links : [
         {
