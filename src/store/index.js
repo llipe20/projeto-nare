@@ -10,7 +10,7 @@ export default createStore({
         "link_site" : "https://projeto-havertz.vercel.app/",
         "link_github" : "https://github.com/llipe20/projeto-havertz", 
         "backdrop" : "https://i.ibb.co/wsrj2Rp/havarts.jpg",
-        "overview" : "Pequena aplicação de uma lojinha de venda online de mangás japoneses. O objetivo principal é práticar os conhecimentos aquiridos em Tailwindcss, utilizando sua enorme biblioteca para criar uma interface simples e de fácil navegação. Usei json-serve para facilitar a manipulação dos dados dos produtos e Vue.js, juntamente com suas bibliotecas - vuex e vue routers - para orquestrar o sistema.",
+        "overview" : "Lojinha de venda online de mangás japoneses. O objetivo principal é práticar os conhecimentos aquiridos em Tailwindcss, utilizando sua enorme biblioteca para criar uma interface simples e de fácil navegação. Usei Vue.js, juntamente com suas bibliotecas - vuex e vue routers - para orquestrar o sistema.",
         "tech_skills" : [
             {
                 "id" : 1,
@@ -41,7 +41,7 @@ export default createStore({
             "link_site" : "https://projeto-akuma-no-mi.vercel.app/",
             "link_github" : "https://github.com/llipe20/projeto-akuma-no-mi", 
             "backdrop" : "https://i.ibb.co/vZWVKyv/akuma.jpg",
-            "overview" : "Projeto criado para um trabalho da faculdade que me rendeu nota máxima, aplicando conhecimentos adquiridos em Vue.js, Tailwind e API´s, consumindo a enorme biblioteca de filmes disponibilizada pela The Movie Database. O sistema de login da aplicação foi implementado usando json-serve como banco de dados improvisado.",
+            "overview" : "Projeto criado para um trabalho da faculdade, aplicando conhecimentos adquiridos em Vue.js, Tailwind e API´s, consumindo a API do The Movie Database. O sistema de login da aplicação foi implementado usando json-serve como banco de dados improvisado.",
             "tech_skills" : [
                 {
                     "id" : 1,
@@ -67,18 +67,13 @@ export default createStore({
         },
         {
             "id" : 3,
-            "title" : "Gerenciador de tarefas",
-            "sub_title" : "projeto Mahoraga",
+            "title" : "Biblioteca online",
+            "sub_title" : "projeto Gawain",
             "link_site" : "https://api-galland.000webhostapp.com/",
             "link_github" : "https://github.com/llipe20/projeto-mahoraga", 
             "backdrop" : "https://i.ibb.co/2WntWdt/backdrop-mahoraga.png",
-            "overview" : "Aplicação tem como objetivo oferecer um pequeno sistema para gerenciar projetos e trabalhos. Ele foi elaborado e moldado de acordo com minhas necessidades pessoais. Basicamente, o software lista tarefas que podem ficar visiveis para pessoas - grande utilidade para mim na faculdade. E aproveitando que estou estudando TypeScrpt e React, resolvi junto tudo em um único desafio.",
+            "overview" : "Trabalho feito em conjunto com minha equipe para nosso projeto Integrador da faculdade, utilizamos a API do Google Book para efetuar as pequisas de livros. Projeto feito com React e Vue.js",
             "tech_skills" : [
-                {
-                    id : 1,
-                    name : 'Type Script',
-                    logo : 'https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg'
-                },
                 {
                     id : 2,
                     name : "Java Script",
