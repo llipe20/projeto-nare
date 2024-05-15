@@ -69,9 +69,9 @@ export default createStore({
             "id" : 3,
             "title" : "Biblioteca online",
             "sub_title" : "projeto Gawain",
-            "link_site" : "https://api-galland.000webhostapp.com/",
-            "link_github" : "https://github.com/llipe20/projeto-mahoraga", 
-            "backdrop" : "https://i.ibb.co/2WntWdt/backdrop-mahoraga.png",
+            "link_site" : "https://projeto-gawain.vercel.app/",
+            "link_github" : "https://github.com/llipe20/projeto-gawain", 
+            "backdrop" : "https://i.ibb.co/WfvjDRh/image.png",
             "overview" : "Trabalho feito em conjunto com minha equipe para nosso projeto Integrador da faculdade, utilizamos a API do Google Book para efetuar as pequisas de livros. Projeto feito com React e Vue.js",
             "tech_skills" : [
                 {
